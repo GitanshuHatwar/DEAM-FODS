@@ -1,0 +1,5 @@
+node
+/node-modules
+myvenv
+venv
+.env
