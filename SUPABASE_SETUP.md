@@ -220,9 +220,9 @@ Run the following SQL in the **SQL Editor**:
 ```sql
 -- Auto-create customer profile on signup
 CREATE OR REPLACE FUNCTION handle_new_user()
-RETURNS TRIGGER LANGUAGE plpgsql SECURITY DEFINER AS $$
+RETURNS TRIGGER LANGUAGE plpgsql SECURITY DEFINER SET search_path = public AS $$
 BEGIN
-  INSERT INTO profiles (id, full_name, role, is_active)
+  INSERT INTO public.profiles (id, full_name, role, is_active)
   VALUES (
     NEW.id,
     COALESCE(NEW.raw_user_meta_data->>'full_name', NEW.email),

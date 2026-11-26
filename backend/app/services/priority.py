@@ -13,5 +13,5 @@ def compute_effective_priority(base_priority: float, created_at: datetime, overr
     if created_at.tzinfo is None:
         created_at = created_at.replace(tzinfo=timezone.utc)
     hours_open = (now - created_at).total_seconds() / 3600
-    aging = min(hours_open * 0.1, 10.0)
+    aging = max(0.0, min(hours_open * 0.1, 10.0))
     return base_priority + aging

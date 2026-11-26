@@ -71,6 +71,6 @@ class TestEffectivePriority:
 
     def test_naive_datetime_handled(self):
         # Should not raise
-        created = datetime.now() - timedelta(hours=1)
+        created = datetime.now(timezone.utc).replace(tzinfo=None) - timedelta(hours=1)
         result = compute_effective_priority(50.0, created, override=None)
         assert result > 50.0
