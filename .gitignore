@@ -3,3 +3,4 @@ node
 myvenv
 venv
 .env
+node_modules
