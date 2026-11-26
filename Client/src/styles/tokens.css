@@ -1,0 +1,40 @@
+:root {
+  /* Core Palette */
+  --color-primary: #2E5D4B;        /* Deep Sage Green - Main CTA & active focus */
+  --color-secondary: #3F7A64;      /* Muted Green - Hover CTA & secondary accents */
+  --color-primary-light: #E8F3EF;  /* Pale Mint - Active nav pills & light highlights */
+  --color-bg: #F8F6F3;             /* Warm Off-White - Page canvas */
+  --color-surface: #FFFFFF;        /* Card surface */
+  --color-accent: #F4ECE1;         /* Warm Beige - Metadata strips & warm callouts */
+
+  /* Typography & Borders */
+  --color-text-primary: #0F172A;   /* Charcoal */
+  --color-text-secondary: #6B7280; /* Slate Grey */
+  --color-border: #E5E7EB;         /* Soft Grey */
+
+  /* Semantic Status */
+  --color-success: #16A36A;        /* Resolved / Connected / Tap OK */
+  --color-warning: #D99A45;        /* Under Review / Aging / Archived Alert */
+  --color-error: #DC6464;          /* Critical / Unknown Tag / Offline */
+  --color-info: #648DAA;           /* Low / Asset Inspection / Info */
+
+  /* Glass & Elevation */
+  --glass-bg: rgba(255, 255, 255, 0.78);
+  --glass-border: rgba(229, 231, 235, 0.85);
+  --shadow-card: 0 1px 3px rgba(15, 23, 42, 0.04), 0 1px 2px rgba(15, 23, 42, 0.02);
+  --shadow-glass: 0 8px 30px rgba(15, 23, 42, 0.06);
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: "Plus Jakarta Sans", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+}
