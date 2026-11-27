@@ -12,6 +12,7 @@ class UserProfile(BaseModel):
     full_name: str
     role: str
     is_active: bool
+    created_at: str = ""
 
 
 def get_current_user(authorization: str = Header(...)) -> UserProfile:
@@ -59,6 +60,7 @@ def get_current_user(authorization: str = Header(...)) -> UserProfile:
         full_name=profile["full_name"],
         role=profile["role"],
         is_active=profile["is_active"],
+        created_at=str(profile.get("created_at") or ""),
     )
 
 
